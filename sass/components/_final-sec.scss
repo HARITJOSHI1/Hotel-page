@@ -1,0 +1,67 @@
+.final {
+  background-color: var(--color-grey-light-4);
+  text-align: center;
+
+  &__heading {
+    font-family: inherit;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 2.7rem;
+    padding: 3rem 0;
+    color: var(--color-grey-dark-1);
+  }
+
+  &__btn {
+    border: none;
+    margin-bottom: 3rem;
+    border-radius: 3rem;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 5rem rgba($color: #000000, $alpha: 0.5);
+    background-image: linear-gradient(
+      to right,
+      var(--color-primary-light),
+      var(--color-primary-dark)
+    );
+    transition: all 0.2s;
+
+    & > * {
+      display: inline-block;
+      transition: all 0.2s;
+      text-transform: uppercase;
+      font-weight: 300;
+      color: #ffffff;
+    }
+
+    &:hover{
+        background-image: linear-gradient(
+            to right,
+            var(--color-primary-dark),
+            var(--color-primary-light),
+          );
+    }
+
+  }
+
+  &__btn:hover &__txt-vis {
+    transform: translateY(100%);
+  }
+
+  &__btn:hover &__txt-in {
+    top: 0;
+  }
+
+  &__txt-vis {
+    height: 100%;
+    padding: 2rem 7.5rem;
+  }
+
+  &__txt-in {
+    padding: 2rem 0rem;
+    position: absolute;
+    top: -100%;
+    height: 100%;
+    left: 2rem;
+  }
+}

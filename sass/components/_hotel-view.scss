@@ -1,0 +1,338 @@
+.hotel-view {
+  &__gallary {
+    display: flex;
+  }
+
+  &__images {
+    width: 100%;
+  }
+}
+
+.overview {
+  display: flex;
+  align-items: center;
+  margin-top: -0.7rem;
+  background-color: #fff;
+
+  &__heading {
+    color: inherit;
+    font-family: inherit;
+    color: black;
+    font-weight: 200;
+    margin-left: 2rem;
+  }
+
+  &__rating {
+    display: flex;
+    margin-right: auto;
+    padding-left: 2rem;
+    // flex: 1;
+  }
+
+  &__star-icons {
+    width: 1.75rem;
+    height: 1.75rem;
+    transition: all 0.2s;
+    cursor: pointer;
+    // margin-right: auto;
+    fill: var(--color-primary);
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  &__location {
+    display: flex;
+    cursor: pointer;
+		margin-right: 3rem;
+		font-family: inherit;
+		font-size: inherit;
+
+    &__icon {
+      width: 2rem;
+      height: 2rem;
+      display: flex;
+      fill: var(--color-primary);
+    }
+
+    &__btn:link,
+    &__btn:visited {
+      color: var(--color-primary);
+      text-decoration: none;
+      border-bottom: 1px solid var(--color-primary);
+			transition: all 0.2s;
+			font-size: 1.3rem;
+    }
+
+    &__btn:focus {
+      animation: pulsate 1s ease-in-out infinite;
+      outline: none;
+		}
+		
+		&__btn:hover {
+      color: var(--color-grey-dark-1);
+		}
+
+		&__btn:hover {
+			color: var(--color-grey-dark-1);
+			border-bottom-color: var(--color-grey-dark-1);
+		}
+		
+  }
+
+  &__review {
+    background-color: var(--color-primary);
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1.76rem;
+    color: #fff;
+  }
+
+  &__scores {
+    font-size: 2.25rem;
+    font-weight: 300;
+    // display: block;
+  }
+
+  &__votes {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    margin-top: -0.5rem;
+    font-weight: 300;
+  }
+
+  @keyframes pulsate {
+    0% {
+      transform: scale(1);
+      box-sizing: none;
+    }
+
+    50% {
+      transform: scale(1.05);
+      box-shadow: 0 1.5rem 7rem rgba($color: #000000, $alpha: 1);
+    }
+
+    100% {
+      transform: scale(1);
+      box-shadow: none;
+    }
+  }
+}
+
+.wrapper {
+	display: flex;
+	justify-content: space-evenly;
+
+  .description {
+    background-color: #fff;
+    flex: 0 0 50%;
+    margin: 4.5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+		justify-content: space-evenly;
+		padding: 0rem 3rem;
+		box-shadow: 0 1.5rem 5rem rgba($color: #000000, $alpha: .25);
+
+    &__para {
+      &--p1 {
+        margin-bottom: 2rem;
+        color: var(--color-grey-dark-2);
+        font-size: 1.4rem;
+        font-family: inherit;
+      }
+
+      &--p2 {
+        color: var(--color-grey-dark-2);
+        font-size: 1.4rem;
+        font-family: inherit;
+      }
+    }
+
+    &__features {
+      display: flex;
+			width: 100%;
+			margin: 4rem 0;
+
+      justify-content: center;
+      align-items: center;
+      border-top: 1px solid var(--color-grey-light-4);
+      border-bottom: 1px solid var(--color-grey-light-4);
+
+      &--list-1 {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 2rem;
+      }
+    }
+
+    &__items{
+      flex: 0 0 50%;
+      margin-bottom: .7rem;
+      font-size: 1.3rem;
+      color: var(--color-grey-dark-2);
+
+      &::before{
+        content: "";
+        display: inline-block;
+        height: 1rem;
+        width: 1rem;
+        margin-right: .7rem;
+
+        // for older browsers 
+        // background-image: url(../../img/chevron-thin-right.svg);
+        // background-size: cover;
+
+        background-color: var(--color-primary);
+        mask-image: url(../../img/chevron-thin-right.svg);
+        mask-size: cover;
+      }
+    }
+
+  }
+
+  .description__likes {
+		display: flex;
+
+    .light-heading {
+      color: var(--color-grey-dark-3);
+			display: inline-block;
+      font-size: 1.2rem;
+			font-weight: 500;
+    }
+
+    &__ppl {
+			display: flex;
+			margin-left: 2rem;
+    }
+
+    .liked-ppl {
+			box-sizing: content-box;
+			&:not(:last-child){
+				margin-right: -1.5rem;
+			}
+			border: .42rem solid #fff;
+      width: 4rem;
+      height: 4rem;
+      // top: 0;
+      // right: 5.4rem;
+      border-radius: 50%;
+    }
+  }
+
+
+  .review-box {
+    width: 34%;
+    margin: 4.5rem 0;
+    color: var(--color-grey-dark-3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: all .2s;
+  }
+
+  .userInfo{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .review{
+    box-shadow: 0 1.5rem 5rem rgba($color: #000000, $alpha: .25);
+    background-color: white;
+    width: 100%;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap:wrap;
+    align-content: center;
+    overflow: hidden;
+    position: relative;
+    justify-content: center;
+
+    &:not(:last-child){
+      margin-bottom: 5rem;
+    }
+
+    &::before{
+      content: "\201C";
+      font-size: 20rem;
+      color: var(--color-grey-light-3);
+      position: absolute;
+      line-height: 1;
+      z-index: 1;
+      top: -2.1rem;
+      left: -2rem;
+      font-family: sans-serif !important;
+    }
+
+    &__para{
+     width: 100%;
+     position: relative;
+     z-index: 1000;
+     display: block;
+     margin-bottom: 3rem;
+    }
+
+    &__user{
+      display: flex;
+      align-self: flex-start;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__img{
+      width: 4rem;
+      height: 4rem;
+      margin-right: 1rem;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    &__ratings{
+      margin-left: auto;
+      font-size: x-large;
+      color: var(--color-primary-light);
+    }
+
+    &__date{
+      color: var(--color-grey-light-4);
+      font-size: 1.25rem;
+    }
+
+    &__name{
+      text-transform: uppercase;
+      color: var(--color-grey-dark-1);
+      font-weight: 500;
+    }
+
+    &__btn:link, &__btn:visited{
+      text-decoration: none;
+      color: var(--color-primary-light);
+      font-size: 1.4rem;
+      display: flex;
+      align-self: flex-start;
+      transition: all .2s;
+
+      span{
+        margin-left: .4rem;
+        transition: all .2s;
+      }
+
+      &:hover{
+        span{
+          margin-left: .7rem;
+        }
+      }
+
+    }
+
+  }
+}
