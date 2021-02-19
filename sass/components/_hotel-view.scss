@@ -127,7 +127,16 @@
 	display: flex;
 	justify-content: space-evenly;
 
+  @media screen and (max-width: 59.375em) {
+    flex-direction: column;
+  }
+
   .description {
+
+    @media screen and (max-width: 59.375em) {
+      padding: 4rem;
+    }    
+
     background-color: #fff;
     flex: 0 0 50%;
     margin: 4.5rem 0;
@@ -235,6 +244,11 @@
     align-items: center;
     justify-content: space-between;
     transition: all .2s;
+
+    @media screen and (max-width: 59.375em) {
+      width: 100%;
+      padding: 0 5rem;
+    }
   }
 
   .userInfo{
@@ -248,6 +262,8 @@
     width: 100%;
     padding: 4rem;
     display: flex;
+    border: none;
+    border-radius: .3rem;
     flex-direction: column;
     align-items: center;
     flex-wrap:wrap;
@@ -314,6 +330,11 @@
     }
 
     &__btn:link, &__btn:visited{
+
+      @media screen and (max-width: 59.375em) {
+        align-self: center;
+      }
+
       text-decoration: none;
       color: var(--color-primary-light);
       font-size: 1.4rem;

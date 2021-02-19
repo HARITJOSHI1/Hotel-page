@@ -5,6 +5,10 @@
   // min-height: 50rem;
   @include const-box-shadow; //	mixin
   border-radius: 2.5px;
+
+  @media screen and (max-width:75em) {
+    margin: 0;
+  }
 }
 
 .header {
@@ -15,6 +19,11 @@
 
 .content {
   display: flex;
+
+  @media screen and (max-width: 64em) {
+    display: flex;
+    flex-direction: column;
+	}
 }
 
 .sidebar {
